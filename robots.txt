@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pioneer82.com/sitemap.xml

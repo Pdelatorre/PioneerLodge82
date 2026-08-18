@@ -6,30 +6,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('navMenu');
     
     if (mobileMenuToggle && navMenu) {
+        // Single source of truth for menu state, so the button's
+        // aria-expanded attribute never drifts out of sync with the menu.
+        const setMenu = (open) => {
+            navMenu.classList.toggle('active', open);
+            mobileMenuToggle.classList.toggle('active', open);
+            mobileMenuToggle.setAttribute('aria-expanded', String(open));
+        };
+
         mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            
-            // Animate hamburger icon
-            this.classList.toggle('active');
+            setMenu(!navMenu.classList.contains('active'));
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navMenu.contains(event.target);
             const isClickOnToggle = mobileMenuToggle.contains(event.target);
-            
+
             if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
+                setMenu(false);
             }
         });
-        
+
+        // Close menu on Escape and return focus to the toggle
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+                setMenu(false);
+                mobileMenuToggle.focus();
+            }
+        });
+
         // Close menu when clicking on a nav link
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
+                setMenu(false);
             });
         });
     }

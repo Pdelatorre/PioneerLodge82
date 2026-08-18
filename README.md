@@ -1,6 +1,6 @@
 # Pioneer Lodge 82 Website
 
-Official website for Pioneer Lodge 82 - Arizona's Western Themed Masonic Lodge, located in Black Canyon City, Arizona.
+Official website for Pioneer Lodge 82 - Arizona's Western Themed Masonic Lodge, located in Sun City, Arizona.
 
 Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.
 
@@ -155,17 +155,24 @@ This is a private project for Pioneer Lodge 82. For questions or issues, please 
 
 ## License
 
-© 2025 Pioneer Lodge 82. All rights reserved.
+© 2026 Pioneer Lodge 82. All rights reserved.
 
 ## Contact
 
-Pioneer Lodge 82  
-PO Box 131  
-Black Canyon City, AZ 85324  
-Email: pioneer82.treasurer@gmail.com 
+Pioneer Lodge 82
+
+**Lodge location**  
+18810 N 107th Ave  
+Sun City, AZ 85373
+
+**Mailing address**  
+Platinum Ledgers, c/o Pioneer #82  
+3120 W Carefree Hwy Ste 1-779  
+Phoenix, AZ 85086
+
+Email: pioneer82.treasurer@gmail.com  
 Phone: 480-264-0131
 
 ## Additional Documentation
 
-- `GITHUB_PAGES_GUIDE.md` - Detailed deployment walkthrough
 - `IMAGES_GUIDE.md` - Image asset specifications
